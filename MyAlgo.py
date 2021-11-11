@@ -1,6 +1,6 @@
 from csv import reader
 from Building import Building
-from elevator import elevator
+from Elevator import elevator
 from CallForElevator import CallForElevator
 import math
 class MyAlgo:
@@ -19,6 +19,13 @@ class MyAlgo:
             type=c[4]
             allocatedTo=int(c[5])
             self.Calls_list.append(CallForElevator(time,src,dest,type,allocatedTo))
+
+        self.elevators_dest = []
+        self.elevators_time_to_finish = []
+        self.num_of_elevators = self.how_many_elevators()
+        for i in range(0, self.num_of_elevators):
+            self.elevators_dest[i] = 0
+            self.elevators_time_to_finish = 0
 
     def how_many_elevators(self): #how many elevators there are in the building
         return len(self.building.elevators)
@@ -71,6 +78,12 @@ class MyAlgo:
         return self.__str__()
 
     # def allocateTo(self):
+
+    def calculate_time(self, index, src, dest ):
+        current_elevator = self.building.elevators[index]
+        current_dest = self.elevators_dest[index]
+        current_time_to_finish = self.elevators_time_to_finish
+
 
 
 
