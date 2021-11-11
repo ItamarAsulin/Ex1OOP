@@ -13,16 +13,16 @@ class CallForElevator:
         Calls_data = list(read_file)
         Calls_list=[]
         for c in Calls_data:
-            time=c[1]
-            src=c[2]
-            dest=c[3]
+            time=float(c[1])
+            src=int(c[2])
+            dest=int(c[3])
             type=c[4]
-            allocatedTo=c[5]
+            allocatedTo=int(c[5])
             Calls_list.append(CallForElevator(time,src,dest,type,allocatedTo))
 
 
     def __str__(self) -> str:
-        return super().__str__()
+        return f"time:{self.time} ,src:{self.src} ,dest:{self.dest}, type:{self.type}, allocatedTo:{self.allocatedTo} \n"
 
     def __repr__(self) -> str:
-        return super().__repr__()
+        return self.__str__()

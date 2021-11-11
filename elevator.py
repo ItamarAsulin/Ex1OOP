@@ -14,7 +14,7 @@ class elevator:
     def __str__(self) -> str:
         return f"id:{self.id} ,speed:{self.speed} ,minF:{self.minFloor}" \
                f" ,maxF:{self.maxFloor} ,closeT:{self.closeTime} " \
-               f",openT:{self.openTime} ,startT:{self.startTime} ,stopT:{self.stopTime}"
+               f",openT:{self.openTime} ,startT:{self.startTime} ,stopT:{self.stopTime}\n"
 
     def __repr__(self) -> str:
         return self.__str__()

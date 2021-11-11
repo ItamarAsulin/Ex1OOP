@@ -4,18 +4,20 @@ from elevator import elevator
 from CallForElevator import CallForElevator
 import math
 class MyAlgo:
-    def __init__(self, building, fileOfCalls, building_json):
-        self.building=building.fromJson(building_json)
+    def __init__(self, building, fileOfCalls, building_json,output_csv):
+        self.output_csv=output_csv
+        self.building=building
+        self.building.fromJson(building_json)
         open_file = open(fileOfCalls)
         read_file = reader(open_file)
         Calls_data = list(read_file)
         self.Calls_list=[]
         for c in Calls_data:
-            time=c[1]
-            src=c[2]
-            dest=c[3]
+            time=float(c[1])
+            src=int(c[2])
+            dest=int(c[3])
             type=c[4]
-            allocatedTo=c[5]
+            allocatedTo=int(c[5])
             self.Calls_list.append(CallForElevator(time,src,dest,type,allocatedTo))
 
     def how_many_elevators(self): #how many elevators there are in the building
@@ -34,7 +36,7 @@ class MyAlgo:
         return listUp,listDown
 
 
-    def sort_by_time(self,listOfCalls): #sort the list of calls by time
+    def calls_sort_by_time(self,listOfCalls): #sort the list of calls by time
         listOfCalls.sort(key=lambda c:c.time)
         return listOfCalls
 
@@ -47,9 +49,57 @@ class MyAlgo:
                 longCalls.append(c)
         return longCalls
 
+    def elevators_sort_by_speed(self): #build a list of the elevators and sort the list by speed
+        elevators_list=[]
+        for e in self.building.elevators:
+            elevators_list.append(e)
+        elevators_list.sort(key=lambda e:e.speed)
+        return elevators_list
+
+    def calls_sort_by_src(self,listOfCalls): #sort the list of calls by src level
+        listOfCalls.sort(key=lambda c:c.src)
+        return listOfCalls
+
+    def calls_sort_by_dest(self,listOfCalls): #sort the list of calls by dest level
+        listOfCalls.sort(key=lambda c:c.dest)
+        return listOfCalls
+
+    def __str__(self) -> str:
+        return f"building:{self.building} ,Calls:{self.Calls_list}"
+
+    def __repr__(self) -> str:
+        return self.__str__()
+
+    # def allocateTo(self):
 
 
 
 
-    # def AllocateTo(self,c):
+
+
+# if __name__== '__main__':
+#     b1=Building(0,0,[])
+#     ohad=MyAlgo(b1,"Calls_a.csv","B4.json")
+#     myCalls=[]
+#     ohad.split_by_type()
+#     # print(ohad.calls_sort_by_src(ohad.Calls_list))
+#     for c in ohad.Calls_list:
+#         if c.src==-1:
+#             myCalls.append(c)
+#     up=[]
+#     down=[]
+#     for c in myCalls:
+#         if c.type==1:
+#             up.append(c)
+#         else:
+#             down.append(c)
+#     up=ohad.calls_sort_by_time(up)
+#     print(up)
+#     newUp=[]
+#     for i in range (0, len(up)-1):
+#         if up[i+1]-up[i].time<=15:
+
+
+
+
 

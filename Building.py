@@ -25,7 +25,7 @@ class Building:
 
 
     def __str__(self) -> str:
-        return f"minFloor:{self.minFloor} ,maxFloor:{self.maxFloor} ,elevators:{self.elevators}"
+        return f"minFloor:{self.minFloor} ,maxFloor:{self.maxFloor} ,elevators:{self.elevators}\n"
 
     def __repr__(self) -> str:
         return self.__str__()
@@ -33,6 +33,8 @@ class Building:
 
 if __name__== '__main__':
     b1=Building(0,0,[])
+    print(b1)
+    b1.fromJson("B2.json")
     print(b1)
     b1.fromJson("B2.json")
     print(b1)
