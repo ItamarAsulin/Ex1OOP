@@ -1,7 +1,6 @@
 import json
 import sys
 from csv import *
-from call_for_elevator import CallForElevator
 from building import Building
 from elevator import Elevator
 import pandas as pd

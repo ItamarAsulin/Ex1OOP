@@ -2,9 +2,8 @@ import csv
 from csv import reader
 from building import Building
 from elevator import Elevator
-from call_for_elevator import CallForElevator
 import math
-from my_algo_itamar import *
+from my_algo import *
 import sys
 
 # Building_json, Calls_csv, output_csv = input().split()

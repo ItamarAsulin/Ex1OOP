@@ -5,8 +5,8 @@ from elevator import Elevator
 class Building:
 
     def __init__(self, min_floor, max_floor, elevators):
-        self.minFloor = min_floor
-        self.maxFloor = max_floor
+        self.min_floor = min_floor
+        self.max_floor = max_floor
         self.elevators = elevators
 
     def fromJson(self, building_json):
