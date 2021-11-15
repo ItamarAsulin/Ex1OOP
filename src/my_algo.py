@@ -3,10 +3,10 @@ import sys
 from csv import *
 from building import Building
 from elevator import Elevator
-import pandas as pd
 
 
-class MyAlgoItamar:
+
+class MyAlgo:
     """
     this method initiates the algorithm from the building json file, calls csv file and output csv file
     """
