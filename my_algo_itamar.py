@@ -14,8 +14,6 @@ class MyAlgoItamar:
         self.building.fromJson(building_json)
         self.calls_csv = calls_csv
         self.output_csv = output_csv
-        self.calls_list = []
-        self.initiate_calls_from_csv()
         self.elevators_dest = []
         self.elevators_finish_time = []
         self.elevators_src = []
