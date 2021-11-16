@@ -14,7 +14,6 @@ class Building:
             building_d = json.load(f)
             self.minFloor = building_d["_minFloor"]
             self.maxFloor = building_d["_maxFloor"]
-            # יא תחת
             self.elevators = []
             for e in building_d["_elevators"]:
                 id = e["_id"]
