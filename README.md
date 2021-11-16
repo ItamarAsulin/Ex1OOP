@@ -47,11 +47,21 @@ for each call in calls list:
        
        update elevator's time of arrival to dest to min time
    
+*How to run the program:*
+
+First enter src directory, from there open cmd.
+
+Run the following command: python3 Ex1.py <building.json file> <calls.csv input file> <allocated_calls.csv output file>
+    
+You can find building json files in /data/Ex1_input/Ex1_Buildings and calls csv files in /data/Ex1_input/Ex1_calls.
+
+The output files are located in out/allocatedCsvFiles.
 
 
-After some previous research here are some relevant sources that are trying to tackle the problem of planning an efficient algorithm:
 
-   1. This article form 2019 ìThe Hidden Science of Elevatorsî is discussing several questions such as what is even a perfect elevators' system? Is it the one that serves the person who waits the longest or one that get the nearest and quickest calls? Etc. :
+Here are some relevant sources that are trying to tackle the problem of planning an efficient algorithm that helped us plan and design out algorithm:
+
+   1. This article form 2019 ‚ÄúThe Hidden Science of Elevators‚Äù is discussing several questions such as what is even a perfect elevators' system? Is it the one that serves the person who waits the longest or one that get the nearest and quickest calls? Etc. :
 https://www.popularmechanics.com/technology/infrastructure/a20986/the-hidden-science-of-elevators/
 
 
