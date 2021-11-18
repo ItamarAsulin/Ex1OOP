@@ -5,7 +5,7 @@ What is offline algorithm?:
 
 In an offline algorithm all the elevators calls are given in sdvance, including the calls' time, src floor and dest floor
 
-*The algorith basics:*
+***The algorith basics:***
 
 load all calls
 .
@@ -57,9 +57,24 @@ You can find building json files in /data/Ex1_input/Ex1_Buildings and calls csv 
 
 The output files are located in out/allocatedCsvFiles.
 
+***how to run the simulator:***
 
+In order to run the simulator, enter the libs directory. from there open cmd.
 
-Here are some relevant sources that are trying to tackle the problem of planning an efficient algorithm that helped us plan and design out algorithm:
+Run the following command: java -jar Ex1_checker_V1.2_obf.jar <first_id,second_id> <bulding json file> <aloocated calls csv file> <output log file>
+    
+As mentioned above, you can find building json files in /data/Ex1_input/Ex1_Buildings and allocated output files are located in out/allocatedCsvFiles.
+    
+The output log file are located in out/logFiles.
+    
+***Project UML:***
+    
+![Ex1 diagram](https://user-images.githubusercontent.com/78217803/142415412-2fec2a31-1dd5-430c-b513-e159d6860003.jpeg)
+
+    
+    
+
+in addition, here are some relevant sources that are trying to tackle the problem of planning an efficient algorithm that helped us plan and design out algorithm:
 
    1. This article form 2019 “The Hidden Science of Elevators” is discussing several questions such as what is even a perfect elevators' system? Is it the one that serves the person who waits the longest or one that get the nearest and quickest calls? Etc. :
 https://www.popularmechanics.com/technology/infrastructure/a20986/the-hidden-science-of-elevators/
