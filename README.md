@@ -74,6 +74,11 @@ The output log file are located in out/logFiles.
 ***Project UML:***
     
 ![Ex1 diagram](https://user-images.githubusercontent.com/78217803/142415412-2fec2a31-1dd5-430c-b513-e159d6860003.jpeg)
+    
+    
+***Simulator UML:***
+
+![Simulator Diagram](https://user-images.githubusercontent.com/78217803/142417206-02e5500e-f018-44b1-bb5d-51712a25933e.jpeg)
 
     
     
