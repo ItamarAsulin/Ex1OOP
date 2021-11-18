@@ -65,7 +65,9 @@ The output files are located in out/allocatedCsvFiles.
 
 In order to run the simulator, enter the libs directory. from there open cmd.
 
-Run the following command: java -jar Ex1_checker_V1.2_obf.jar <first_id,second_id> <bulding json file> <aloocated calls csv file> <output log file>
+Run the following command:
+
+java -jar Ex1_checker_V1.2_obf.jar <first_id,second_id> <bulding.json file> <aloocated_calls.csv file> <output.log file>
     
 As mentioned above, you can find building json files in /data/Ex1_input/Ex1_Buildings and allocated output files are located in out/allocatedCsvFiles.
     
