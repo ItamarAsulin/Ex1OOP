@@ -46,8 +46,10 @@ for each call in calls list:
        set elevator's dest floor to call's dest
        
        update elevator's time of arrival to dest to min time
+       
+       
    
-*How to run the program:*
+***How to run the program:***
 
 First enter src directory, from there open cmd.
 
@@ -56,6 +58,8 @@ Run the following command: python3 Ex1.py <building.json file> <calls.csv input 
 You can find building json files in /data/Ex1_input/Ex1_Buildings and calls csv files in /data/Ex1_input/Ex1_calls.
 
 The output files are located in out/allocatedCsvFiles.
+
+
 
 ***how to run the simulator:***
 
